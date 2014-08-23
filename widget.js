@@ -4,6 +4,7 @@ ns.Widget2 = new Widget(['pic4.jpg', 'pic5.jpg', 'pic6.jpg'],2);  // create Sing
 
 ns.Widget3 = new Widget(['pic1.jpg', 'pic2.jpg', 'pic3.jpg', 'pic4.jpg', 'pic5.jpg', 'pic6.jpg'],1);  // create Single Image Widget
 
+
 /*
 * Creates a Gallery Widget - Currently shows 3 images, but should continue scaling images > 3 
 * @param {array} images - array of image path and names (assume in same directory)
