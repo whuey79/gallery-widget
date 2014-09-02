@@ -37,16 +37,16 @@ function Widget(images,mode) {
   viewer.style.float='left';
   buildImageTags(images,viewer);
 
-  // default thumbnail viewer  
-  thumb.style["width"] = '29%';
-  thumb.style["height"] = '100%';
-  thumb.style.float="right";
-  thumb.style.overflowY = "scroll";
-  buildImageTags(images,thumb);
-
   // add event handler click for thumbnails or main viewer
   // I decided to use .onclick to preserve 'this' from trigger element
+
   if (mode === 1) {   
+    // default thumbnail viewer  
+    thumb.style["width"] = '29%';
+    thumb.style["height"] = '100%';
+    thumb.style.float="right";
+    thumb.style.overflowY = "scroll";
+    buildImageTags(images,thumb);
     itags = thumb.getElementsByTagName('img');
   
     for (var i = 0; i< itags.length; i++) {
