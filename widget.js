@@ -1,9 +1,8 @@
-var ns = ns || {};  // create namespace
+var ns = ns || {};  // create namespaces
+
 ns.Widget1 = new Widget(['pic1.jpg', 'pic2.jpg', 'pic3.jpg'],1);  // create Thumbnail Widget
 ns.Widget2 = new Widget(['pic4.jpg', 'pic5.jpg', 'pic6.jpg'],2);  // create Single Image Widget
-
 ns.Widget3 = new Widget(['pic1.jpg', 'pic2.jpg', 'pic3.jpg', 'pic4.jpg', 'pic5.jpg', 'pic6.jpg'],1);  // create Single Image Widget
-
 
 /*
 * Creates a Gallery Widget - Currently shows 3 images, but should continue scaling images > 3 
@@ -21,7 +20,7 @@ function Widget(images,mode) {
       nodes,itags;
   
   // create style tag and add a couple classes for active and hidden attributes
-  // not sure if it would interfere with on page classes (maybe use more abstract naming)
+  // could interfere with stylesheet classes (maybe use more abstract naming)
   css.innerHTML = ".viewer .hide{display:none;} .viewer .active{display:block;}";
   
   // set defaults styles for container (possibly change to init function in future)
@@ -38,7 +37,7 @@ function Widget(images,mode) {
   buildImageTags(images,viewer);
 
   // add event handler click for thumbnails or main viewer
-  // I decided to use .onclick to preserve 'this' from trigger element
+  // used .onclick to preserve 'this' from trigger element
 
   if (mode === 1) {   
     // default thumbnail viewer  
